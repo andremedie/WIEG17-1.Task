@@ -1,4 +1,5 @@
-
+viewHoroscope();
+function viewHoroscope() {
       $.ajax({
         url: "viewHoroscope.php",
         method: "GET",
@@ -9,7 +10,7 @@
             $("#content").html(results);
         },
     });
-
+}
 function saveHoroscope() {
     $.ajax({
         url: "addHoroscope.php",
@@ -21,7 +22,7 @@ function saveHoroscope() {
             $("#content").html(results);
         },
     });
-
+    viewHoroscope();
 }
 
 function updateHoroscope() {
@@ -35,8 +36,16 @@ function updateHoroscope() {
             $("#content").html(results);
         },
     });
+    viewHoroscope();
 }
 
 function eraseHoroscope() {
-  console.log("test2");  
+    $.ajax({
+        url: "deleteHoroscope.php",
+        method: "DELETE",
+        success: function(results) {
+            $("#content").html(results);
+        },
+    });
+    viewHoroscope();
 }

@@ -1,5 +1,5 @@
 <?php 
-
+//session_start();
 class Horoscope {
 	
     public $personnummer;
@@ -67,16 +67,16 @@ class Horoscope {
 				return "Fiskarna";
 		}
 		else{
-				return "Okänt";
+				return "Okänd Horoskop";
 		}
 		
 	}
 	
 }
 
-//if (isset($_POST['personnummer'])){
 $personnummer = $_POST['personnummer'];
 $Andre = new Horoscope($personnummer);
+    //if (isset($_POST['personnummer'])){
 
 
 
