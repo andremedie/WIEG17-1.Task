@@ -1,13 +1,13 @@
 <?php
 session_start();
-include("addHoroscope.php");
+include("class.php");
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
     
     
  
     
         echo $_SESSION['horoskop'] = $Andre->horoskop;
-        //echo $Andre->horoskop . ".";
+        echo $Andre->horoskop . ".";
 
 } else {
     echo "error at viewHoroscope.php";

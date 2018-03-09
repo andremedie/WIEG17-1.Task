@@ -74,8 +74,10 @@ class Horoscope {
 	
 }
 
+//if (isset($_POST['personnummer'])){
 $personnummer = $_POST['personnummer'];
 $Andre = new Horoscope($personnummer);
+
 
 
 
