@@ -8,14 +8,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!isset($_SESSION['personnummer'])) {
         $_SESSION['personnummer'] = $Andre->horoskop;
     }else{
-        echo "";
+        echo "hej";
     }
     
     
 } else {
     echo "errors";
 }
-//include("viewHoroscope.php");
+
 
 
 ?>
