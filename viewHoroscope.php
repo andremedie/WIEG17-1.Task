@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     }
 } else {
-    echo "error at viewHoroscope.php";
+    
 }
 
 

@@ -1,3 +1,7 @@
+
+
+
+
 viewHoroscope();
 function viewHoroscope() {
       $.ajax({
