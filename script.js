@@ -1,18 +1,21 @@
-
-
-
-
-viewHoroscope();
 function viewHoroscope() {
       $.ajax({
         url: "viewHoroscope.php",
-        method: "GET",
-        data : {
-            personnummer: $("#Input").val()
-        },
-        success: function(results) {
-            $("#content").html(results);
-        },
+        method: "GET",	
+        success: function(result) {
+			if(result == ""){ 
+				$("#content").html("Välkommen 🐶");
+				document.getElementById("save").style.display = "inline";
+				document.getElementById("update").style.display = "none";
+				document.getElementById("delete").style.display = "none";       				
+			}
+			else{
+				$("#content").html(result);
+				document.getElementById("save").style.display = "none";
+				document.getElementById("update").style.display = "inline";
+				document.getElementById("delete").style.display = "inline";       
+			}
+		},		
     });
 }
 function saveHoroscope() {
@@ -21,9 +24,6 @@ function saveHoroscope() {
         method: "POST",
         data : {
             personnummer: $("#Input").val()
-        },
-        success: function(results) {
-            $("#content").html(results);
         },
     });
     viewHoroscope();
@@ -36,9 +36,6 @@ function updateHoroscope() {
         data : {
             personnummer: $("#Input").val()
         },
-        success: function(results) {
-            $("#content").html(results);
-        },
     });
     viewHoroscope();
 }
@@ -47,9 +44,6 @@ function eraseHoroscope() {
     $.ajax({
         url: "deleteHoroscope.php",
         method: "DELETE",
-        success: function(results) {
-            $("#content").html(results);
-        },
     });
     viewHoroscope();
 }

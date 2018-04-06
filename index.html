@@ -7,23 +7,23 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>My Horoscope</title>
 
 </head>
-<body>
+<body onLoad="viewHoroscope()" >
     <h1>Horoskop Uppgift 1 - av André</h1>
-    <div>år mm dd</div>
+    <div>åå mm dd</div>
     <input type="text" id="Input"></input><br/>
     <div>   
-        <button onclick="saveHoroscope()">Spara mitt Horoskop</button>
+        <button id="save" onclick="saveHoroscope()">Spara mitt Horoskop</button>
         
         
-        <button onclick="updateHoroscope()">Uppdatera mitt Horoskop</button>
+        <button id="update" onclick="updateHoroscope()">Uppdatera mitt Horoskop</button>
         
         
-        <button onclick="eraseHoroscope()">Radera mitt Horoskop</button>
+        <button id="delete" onclick="eraseHoroscope()">Radera mitt Horoskop</button>
     </div>
     
-    <div id="content"><br/></div>
+    <div id="content"></div>
 </body>
 </html>
