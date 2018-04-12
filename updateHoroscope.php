@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 				echo "true";
 			}
 			else{
-				echo "false"; // Felaktigt personnummer
+				echo "false"; // Fel personnummer
 			}
 			
 		}
@@ -26,11 +26,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
 		}
 	
 	}else{
-		echo "false"; // finns inget horoskop sen innan
+		echo "false"; // finns inget horoskop sedan innan
 	}
 
 } else {
-    echo "false"; // fel metod
+    echo "false"; // fel method
 }
 
 

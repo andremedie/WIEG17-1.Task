@@ -4,7 +4,7 @@ function viewHoroscope() {
         method: "GET",	
         success: function(result) {
 			if(result == ""){ 
-				$("#content").html("Välkommen 🐶");
+				$("#content").html("Välkommen 🐒");
 				document.getElementById("save").style.display = "inline";
 				document.getElementById("update").style.display = "none";
 				document.getElementById("delete").style.display = "none";       				

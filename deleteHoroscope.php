@@ -7,10 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE'){
 		echo "true";
 	}
 	else{
-		echo "false"; // Finns ingen session
+		echo "false"; // ingen session
 	}
 }
 else{
-	echo "false"; // fel metod
+	echo "false"; // fel 
 }
 ?>

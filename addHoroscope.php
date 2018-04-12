@@ -11,18 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				echo "true";
 			}
 			else{
-				echo "false"; // Felaktigt personnummer
+				echo "false";
 			}
         }
 		else{
-			echo "false"; // Inget personnummer i POST
+			echo "false"; 
 		}
 
     }else{
-        echo "false"; // Ej skriva över befintligt horoskop
+        echo "false"; 
     }
 } else {
-    echo "false"; // Fel metod
+    echo "false"; 
 }
 
 
